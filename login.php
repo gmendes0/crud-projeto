@@ -3,8 +3,8 @@
     <head>
         <meta charset="UTF-8"/>
         <title>login</title>
-        <link rel="stylesheet" href="main.css"/>
-        <script src="caroucel.js"></script>
+        <link rel="stylesheet" href="css/main.css"/>
+        <script src="scripts/js/caroucel.js"></script>
     </head>
 
     <body>
