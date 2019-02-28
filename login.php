@@ -39,6 +39,10 @@
             <div class="imgSlide" style="background: url(backgrounds/02.jpeg);"></div>
             <div class="imgSlide" style="background: url(backgrounds/03.jpeg);"></div>
             <div class="imgSlide" style="background: url(backgrounds/04.jpeg);"></div>
+            <script>
+                carousel();
+            </script>
+
         </div>
     </body>
 </html>

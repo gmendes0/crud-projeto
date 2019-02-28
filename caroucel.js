@@ -1,7 +1,7 @@
 var slideIndex = 0;
-caroucel();
+//carousel();
 
-function caroucel(){
+function carousel(){
 
     var i;
     var x = document.getElementsByClassName("imgSlide");
@@ -15,12 +15,13 @@ function caroucel(){
     slideIndex++;
 
     if(slideIndex > x.length){
-
+        
         slideIndex = 1;
-
+    
     }
 
-    x[slideIndex-1].style.backgroundSize = "cover";
-    setTimeout(caroucel, 5000);
+    x[slideIndex-1].style.display = "block";
+
+    setTimeout(carousel, 15000);
 
 }
