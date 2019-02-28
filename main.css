@@ -1,0 +1,89 @@
+@import url(google_sans.css);
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Google Sans';
+}
+
+.imgSlide{
+    width: 100%;
+    /*background-size: cover;*/
+    position: fixed;
+    height: 100vh;
+    z-index: -1;
+}
+
+.center{
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-box{
+    box-sizing: border-box;
+    width: 300px;
+    position: relative;
+    padding: 15px;
+    background: #FFFFFF;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.login-box h1{
+    text-align: center;
+}
+
+.login-box .form-group{
+    width: 100%;
+    margin: 15px 0;
+    position: relative;/* -> Mantem o label dentro do form group*/
+}
+
+.form-group input:not(.button){
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #DDDDDD;
+    outline: none;
+    border-radius: 5px;
+}
+
+.form-group .button{
+    padding: 10px 10px;
+    width: 100%;
+    border: none;
+    border-radius: 3px;
+    background: rgb(220, 43, 226);
+}
+
+.form-group label{
+    z-index: 1;
+    position: absolute;/* -> possibilita o posicionamento do label */
+    top: 8px;
+    left: 10px;
+    pointer-events: none;
+    opacity: 0.8;
+    color: rgb(112, 112, 112);
+}
+
+.form-group input:not(.button):focus ~label,
+.form-group input:not(.button):valid ~label{
+    top: -9px;
+    opacity: 1;
+    font-size: 13px;
+    padding: 0 3px;
+    background: #FFFFFF;
+    transition: .3s;
+}
+
+.form-group input:not(.button):focus ~label{
+    color: rgb(220, 43, 226);
+}
+
+.form-group input:not(.button):focus{
+    border: 1px solid rgb(220, 43, 226);
+}
