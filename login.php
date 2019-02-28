@@ -4,7 +4,7 @@
         <meta charset="UTF-8"/>
         <title>login</title>
         <link rel="stylesheet" href="css/main.css"/>
-        <script src="scripts/js/caroucel.js"></script>
+        <script src="script/js/caroucel.js"></script>
     </head>
 
     <body>
