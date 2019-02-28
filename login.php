@@ -32,6 +32,8 @@
 
                 </form>
 
+                <?php require 'script/php/banco.php'; ?>
+
             </div>
 
             <div class="imgSlide" style="background: url(backgrounds/05.jpeg);"></div>
