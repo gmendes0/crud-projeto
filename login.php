@@ -1,5 +1,10 @@
+<?php
+
+    session_start();
+
+?>
 <!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
         <meta charset="UTF-8"/>
         <title>login</title>
@@ -14,7 +19,7 @@
             
                 <h1>Login</h1>
 
-                <form action="" method="post">
+                <form action="login.php" method="post">
 
                     <div class="form-group">
                         <input type="text" name="login" required/>
@@ -32,7 +37,19 @@
 
                 </form>
 
-                <?php require 'script/php/banco.php'; ?>
+                <?php
+
+                    if(!empty($_POST)){
+
+                        if(!empty($_POST['login']) && !empty($_POST['senha'])){
+
+                            require 'script/php/banco.php';
+
+                        }
+
+                    }
+
+                ?>
 
             </div>
 

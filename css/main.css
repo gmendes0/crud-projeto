@@ -23,7 +23,7 @@ body{
     align-items: center;
 }
 
-.login-box{
+.login-box, .cad-box{
     box-sizing: border-box;
     width: 300px;
     position: relative;
@@ -33,11 +33,11 @@ body{
     box-sizing: border-box;
 }
 
-.login-box h1{
+.login-box, .cad-box h1{
     text-align: center;
 }
 
-.login-box .form-group{
+.login-box .form-group, .cad-box .form-group{
     width: 100%;
     margin: 15px 0;
     position: relative;/* -> Mantem o label dentro do form group*/
