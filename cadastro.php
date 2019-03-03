@@ -8,7 +8,7 @@
 
     }else{
 
-        require "script/php/cad_banco.php";
+        require "script/php/dbcadastro.php";
 
     }
 ?>

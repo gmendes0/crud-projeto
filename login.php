@@ -2,6 +2,22 @@
 
     session_start();
 
+    $erro = ['','Usuário ou senha inválidos','Preencha todos os campos'];
+
+    if(!empty($_POST)){
+
+        if(!empty($_POST['login']) && !empty($_POST['senha'])){
+
+            require 'script/php/dblogin.php';
+
+        }else{
+
+            $n = 2;
+
+        }
+
+    }
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -18,6 +34,7 @@
             <div class="login-box">
             
                 <h1>Login</h1>
+                <h2 class="login-box__aviso aviso--erro"><?php if(!empty($n)){echo $erro[$n];} ?></h2>
 
                 <form action="login.php" method="post">
 
@@ -36,20 +53,6 @@
                     </div>
 
                 </form>
-
-                <?php
-
-                    if(!empty($_POST)){
-
-                        if(!empty($_POST['login']) && !empty($_POST['senha'])){
-
-                            require 'script/php/banco.php';
-
-                        }
-
-                    }
-
-                ?>
 
             </div>
 

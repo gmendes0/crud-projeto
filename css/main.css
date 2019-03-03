@@ -87,3 +87,15 @@ body{
 .form-group input:not(.button):focus{
     border: 1px solid rgb(220, 43, 226);
 }
+
+/** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** **/
+/*avisos*/
+
+.login-box__aviso{
+    text-align: center;
+    font-size: 16px;
+}
+
+.aviso--erro{
+    color: rgb(255, 76, 44);
+}
