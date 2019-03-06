@@ -44,19 +44,20 @@
                         $login = $_POST['login'];
                         $senha = $_POST['senha'];
                         $nome = $_POST['nome'];
+                        $dcadastro = date('Y-m-d H:i:s');
 
                         if($_POST['ativo'] == 's'){
 
-                            $ativo = 0;
+                            $ativo = 1;
 
                         }else if($_POST['ativo'] = 'n'){
 
-                            $ativo = 1;
+                            $ativo = 0;
 
                         }
 
-                        $meusql = "INSERT INTO usuario(login, senha, nome, ativo) VALUES('$login', '$senha', '$nome', '$ativo')";
-                        mysqli_query($conexao,$meusql);
+                        $meusql = "INSERT INTO usuario(login, senha, nome, datacadastro, ativo) VALUES('$login', '$senha', '$nome', '$dcadastro', '$ativo')";
+                        mysqli_query($conexao,$meusql) or die('Erro ao cadastrar: '.mysqli_error($conexao));
 
                     }else{
 

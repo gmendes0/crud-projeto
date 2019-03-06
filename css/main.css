@@ -113,3 +113,48 @@ body{
 .cad-box__aviso, .aviso--erro{
     font-size: 15px;
 }
+
+/*//===================================================//*/
+/*Tabela*/
+
+.lista{
+    width: 100%;
+    margin: 20px auto;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.lista .tabela{
+    width: 100%;
+    border-collapse: collapse;
+    box-sizing: border-box;
+    border: 1px solid #DDDDDD;
+}
+
+.lista .tabela thead{
+    text-transform: uppercase;
+    background: rgb(220, 43, 226);
+}
+
+.lista .tabela td{
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #DDDDDD;
+}
+
+.lista .tabela thead td{
+    border: none;
+}
+
+.lista .tabela td a{
+    text-transform: capitalize;
+    color: blueviolet;
+    background: #FFFFFF;
+    text-decoration: none;
+}
+
+.lista .tabela td .button:hover{
+    cursor: pointer;
+}
+
+/*//===================================================//*/

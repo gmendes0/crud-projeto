@@ -63,13 +63,6 @@
 
                     <div class="form-group">
 
-                        <input type="date" name="data" id=""/>
-                        <label for="">Data</label>
-
-                    </div>
-
-                    <div class="form-group">
-
                         <select name="ativo">
                             <option value="s">sim</option>
                             <option value="n">não</option>
