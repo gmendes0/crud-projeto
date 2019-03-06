@@ -11,6 +11,9 @@
         require "script/php/dbcadastro.php";
 
     }
+
+    $erro = ['','Preencha o campo login','','',''];
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -19,6 +22,7 @@
         <title>Document</title>
         <link rel="stylesheet" href="css/main.css"/>
         <link rel="stylesheet" href="css/style.css"/>
+        <script src="script/js/carousel.js"></script>
     </head>
 
     <body>
@@ -26,7 +30,8 @@
         <div class="center">
 
             <div class="cad-box">
-
+                <h1>Cadastro</h1>
+                <h2 class="cad-box__aviso aviso--erro"><?php if(!empty($n)){echo $erro[$n];} ?></h2>
                 <form action="" method="post">
                     <div class="form-group">
 
@@ -74,22 +79,24 @@
 
                     <div class="form-group">
 
-                        <input type="submit" value="enviar"/>
+                        <input type="submit" value="enviar" class="button"/>
 
                     </div>
 
-                    
-                    
-                    
-                    
-                   
-                    
-                    
                 </form>
+
+                <a href="site.php">Voltar</a>
 
             </div>
 
-            <a href="site.php">Voltar</a>
+            <div class="imgSlide" style="background: url(backgrounds/05.jpeg);"></div>
+            <div class="imgSlide" style="background: url(backgrounds/00.jpeg);"></div>
+            <div class="imgSlide" style="background: url(backgrounds/02.jpeg);"></div>
+            <div class="imgSlide" style="background: url(backgrounds/03.jpeg);"></div>
+            <div class="imgSlide" style="background: url(backgrounds/04.jpeg);"></div>
+            <script>
+                carousel();
+            </script>
 
         </div>
        

@@ -33,6 +33,16 @@ body{
     box-sizing: border-box;
 }
 
+.login-box a, .cad-box a{
+
+    text-decoration: none;
+    text-align: center;
+    text-transform: lowercase;
+    display: block;
+    color: rgb(220, 43, 226);
+
+}
+
 .login-box, .cad-box h1{
     text-align: center;
 }
@@ -91,11 +101,15 @@ body{
 /** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** **/
 /*avisos*/
 
-.login-box__aviso{
+.login-box__aviso .cad-box__aviso{
     text-align: center;
     font-size: 16px;
 }
 
 .aviso--erro{
     color: rgb(255, 76, 44);
+}
+
+.cad-box__aviso, .aviso--erro{
+    font-size: 15px;
 }
