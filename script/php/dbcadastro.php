@@ -83,6 +83,17 @@
 
         }
 
+        /*for($i = 0; $i < 100; $i++){
+
+            $senha = rand(0, 999999);
+            $ativo = rand(0, 1);
+            $nome = chr(rand(65, 90)).chr(rand(65, 90)).chr(rand(65, 90)).chr(rand(65, 90)).chr(rand(65, 90)).chr(rand(65, 90)).chr(rand(65, 90));
+            $dcadastro = date('Y-m-d H:i:s');
+            $meusql = "INSERT INTO usuario(login, senha, nome, datacadastro, ativo) VALUES('usuario$i', '$nome', '$senha', '$dcadastro', '$ativo')";
+            mysqli_query($conexao,$meusql);
+
+        }*/
+
     }
 
 ?>

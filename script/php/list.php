@@ -23,7 +23,40 @@
         /*//==================================================================================================//*/
         /*----------------------------------------------\ UPDATE /---------------------------------------------*/
         
-        
+        if(!empty($_GET['edit'])){
+
+            require 'script/php/dbconfig.php';
+
+            $usuario = $_GET['edit'];
+            $meusql = "SELECT * FROM usuario WHERE login = '$usuario'";
+            $u = mysqli_fetch_array(mysqli_query($conn, $meusql));
+
+            require 'script/php/f_edit.php';
+
+            if(!empty($_POST)){
+
+                $login = $_GET['edit'];
+                $e_login = $_POST['login'];
+                $e_senha = $_POST['senha'];
+                $e_nome = $_POST['nome'];
+                if($_POST['ativo'] == 's'){
+
+                    $e_ativo = 1;
+
+                }else if($_POST['ativo'] = 'n'){
+
+                    $e_ativo = 0;
+
+                }
+
+                $meusql = "UPDATE usuario SET login = '$e_login', senha = '$e_senha', nome = '$e_nome', ativo = '$e_ativo' WHERE login = '$login'";
+                mysqli_query($conn, $meusql);
+
+                echo "<script>window.location='site.php'</script>";
+
+            }
+
+        }
         
         /*/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\*/
 
@@ -62,7 +95,7 @@
 
             $table = 'usuario';
             
-            $meusql = "SELECT * FROM $table";
+            $meusql = "SELECT * FROM $table ORDER BY login ASC";
             $rsql = mysqli_query($conn, $meusql);
 
             while($sqlrow = mysqli_fetch_array($rsql)){
